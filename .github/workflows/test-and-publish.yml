@@ -22,6 +22,11 @@ jobs:
       run: |
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
+    - name: Generate supporting text files
+      run: node main.js
+      env:
+        NODE_ENV: testing
+        EXIT_ON_START: true        
     - name: Increase version
       run: npm version patch
     - name: Publish to Github

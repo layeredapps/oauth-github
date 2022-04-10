@@ -4,6 +4,9 @@ const oauth = require('@layeredapps/oauth')
 module.exports = {
   auth: false,
   get: async (req, res) => {
+    if (req.query && req.query.error) {
+      return dashboard.Response.redirect(req, res, '/account/signin?error=github-' + req.query.error)
+    }
     const clientid = process.env.GITHUB_OAUTH_CLIENTID
     const secret = process.env.GITHUB_OAUTH_SECRET
     const params = {

@@ -38,11 +38,7 @@ Edit your `package.json` to activate the module:
 
     "dashboard": {
       "modules": [
-        "@layeredapps/oauth"
-      ],
-      "content": [
-        "@layeredapps/oauth/src/content/register-buttons.js",
-        "@layeredapps/oauth/src/content/signin-buttons.js"
+        "@layeredapps/oauth-github"
       ]
     }
 
@@ -50,17 +46,12 @@ After adding this service, add provider modules too:
 
     $ npm install @layeredapps/oauth-github
 
-Edit your `package.json` to including the provider buttons:
+Edit your `package.json` to include the scripts for provider buttons which injects the GitHub buttons and error message templates into your `signin` and `register` pages:
 
     "dashboard": {
-      "modules": [
-        "@layeredapps/oauth",
-        "@layeredapps/oauth-github"
-      ],
       "content": [
-        "@layeredapps/oauth/src/content/register-buttons.js",
-        "@layeredapps/oauth/src/content/signin-buttons.js",
-        "@layeredapps/oauth-github/src/content/register-button.js"
+        "@layeredapps/oauth-github/src/content/error-templates.js",
+        "@layeredapps/oauth-github/src/content/register-button.js",
         "@layeredapps/oauth-github/src/content/signin-button.js"
       ]
     }
