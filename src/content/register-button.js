@@ -3,7 +3,6 @@ module.exports = {
     if (req.urlPath !== '/account/register') {
       return
     }
-    const buttons = document.getElementById('oauth-buttons')
     const icon = document.createElement('img')
     icon.attr = {
       src: '/public/oauth/001-github-sign-white.png'

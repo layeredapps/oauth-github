@@ -10,9 +10,9 @@ module.exports = {
       client_id: clientid,
       client_secret: secret,
       code: req.query.code,
-      redirect_uri: `${global.dashboardServer}/auth/oauth-callback`,
+      redirect_uri: `${global.dashboardServer}/auth/oauth-callback`
     }
-    const tokenRaw = await dashboard.Proxy.externalPOST(`https://github.com/login/oauth/access_token`, {}, params)
+    const tokenRaw = await dashboard.Proxy.externalPOST('https://github.com/login/oauth/access_token', {}, params)
     let token = tokenRaw.substring(tokenRaw.indexOf('=') + 1)
     token = token.substring(0, token.indexOf('&'))
     // get their Github profile
@@ -22,7 +22,7 @@ module.exports = {
     })
     const profile = JSON.parse(profileRaw)
     // register or signin
-    const user = await oauth.registerOrSignIn(profile.login, 'github')
+    const user = await oauth.registerOrSignIn(req, profile.login, 'github')
     // session cookie
     let cookieStr = 'HttpOnly; path=/; SameSite=strict'
     if (req.secure) {
