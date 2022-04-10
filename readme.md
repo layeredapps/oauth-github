@@ -11,9 +11,9 @@
 
 Dashboard bundles everything a web app needs, all the "boilerplate" like signing in and changing passwords, into a parallel server so you can write a much smaller web app.
 
-[OAuth](https://www.maxmind.com/en/home) provide authentication options for websites using the Oauth standard, so users can "sign in with" GitHub and other compatible services rather than by username/password.
+The `oath` module is a framework for using OAuth, a standardized authentication flow for allowing users to "sign in with" 3rd-party services.  
 
-[OAuth-Github] enables signing in and registering with GitHub.
+The `oauth-github` module enables signing in and registering with GitHub.
 
 ## Create OAuth application on GitHub
 
@@ -46,7 +46,7 @@ After adding this service, add provider modules too:
 
     $ npm install @layeredapps/oauth-github
 
-Edit your `package.json` to include the scripts for provider buttons which injects the GitHub buttons and error message templates into your `signin` and `register` pages:
+Edit your `package.json` to include the scripts for provider buttons and error message templates, which injects HTML into your `signin` and `register` pages:
 
     "dashboard": {
       "content": [
