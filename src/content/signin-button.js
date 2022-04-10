@@ -3,13 +3,17 @@ module.exports = {
     if (req.urlPath !== '/account/signin') {
       return
     }
-    const form = document.getElementById('submit-form')
-    const buttonContainer = document.createElement('div')
-    buttonContainer.attr = {
-      id: 'oauth-buttons',
-      class: 'oauth-buttons'
+    const link = pageDoc.createElement('a')
+    link.attr = {
+      style: 'background-image: url(/public/oauth/001-github-sign-white.png)',
+      href: '/auth/github-redirect',
+      class: 'button'
     }
-    form.child[form.child.length] = form.child[form.child.length - 1]
-    form.child[form.child.length - 1] = buttonContainer
+    link.child = [{
+      node: 'text',
+      text: 'Sign in with GitHub'
+    }]
+    const buttonContainer = pageDoc.getElementById('oauth-buttons')
+    buttonContainer.appendChild(link)
   }
 }
