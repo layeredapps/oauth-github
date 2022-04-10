@@ -10,10 +10,9 @@ module.exports = {
       class: 'button'
     }
     link.child = [{
-        node: 'text',
-        text: 'Register with GitHub'
-      }
-    ]
+      node: 'text',
+      text: 'Register with GitHub'
+    }]
     const buttonContainer = pageDoc.getElementById('oauth-buttons')
     buttonContainer.appendChild(link)
   }
