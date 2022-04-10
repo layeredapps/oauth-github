@@ -1,6 +1,6 @@
 {
   "name": "@layeredapps/oauth-github",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "#### Index",
   "main": "index.js",
   "scripts": {
@@ -16,9 +16,5 @@
   "author": "",
   "license": "ISC",
   "dashboard": {
-    "content": [
-      "/src/content/register-button.js",
-      "/src/content/signin-button.js"
-    ]
   }
 }
