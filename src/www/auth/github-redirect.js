@@ -11,7 +11,6 @@ module.exports = {
       response_type: 'code',
       scope: 'profile email openid'
     }
-    console.log('redirect to', req.url, req.query, params)
     res.writeHead(301, {
       Location: `${redirectURL}?${querystring.stringify(params)}`
     })
