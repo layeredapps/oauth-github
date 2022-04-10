@@ -7,7 +7,7 @@ module.exports = {
     link.attr = {
       style: 'background-image: url(/public/oauth/001-github-sign-white.png)',
       href: '/auth/github-redirect',
-      class: 'button'
+      class: 'button oauth-button'
     }
     link.child = [{
       node: 'text',
