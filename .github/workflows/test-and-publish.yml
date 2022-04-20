@@ -22,6 +22,10 @@ jobs:
       run: |
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
+    - name: Increase version
+      run: npm version patch
+    - name: Run test suite
+      run: |
         npm install -D --silent --no-audit --no-fund &>/dev/null 
         npm install sqlite3 --silent --no-save --no-audit --no-fund &>/dev/null 
     - name: Generate supporting text files
@@ -31,9 +35,7 @@ jobs:
         EXIT_ON_START: true
         GENERATE_SITEMAP_TXT: true
         GENERATE_API_TXT: true
-        GENERATE_ENV_TXT: true             
-    - name: Increase version
-      run: npm version patch
+        GENERATE_ENV_TXT: true
     - name: Publish to Github
       uses: stefanzweifel/git-auto-commit-action@v4.1.6
       with:
