@@ -1,5 +1,8 @@
 # Documentation for OAuth-Github module
 
+- [Documentation website](https://layeredapps.github.io)
+- [Module documentation](https://layeredapps.github.io/oauth-github-module)
+
 #### Index
 
 - [Introduction](#introduction)
