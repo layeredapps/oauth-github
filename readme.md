@@ -7,6 +7,7 @@
 
 - [Introduction](#introduction)
 - [Import this module](#import-this-module)
+- [Provided server, content and proxy handlers](#provided-server-content-and-proxy-handlers)
 - [Github repository](https://github.com/layeredapps/maxmind-geoip)
 - [NPM package](https://npmjs.org/layeredapps/maxmind-geoip)
 
@@ -58,4 +59,13 @@ Edit your `package.json` to include the scripts for provider buttons and error m
         "@layeredapps/oauth-github/src/content/signin-button.js"
       ]
     }
-    
+ 
+# Provided server, content and proxy handlers
+
+This module comes with some convenience scripts you can add to your `package.json`:
+
+| Type     | Script path                                                      | Description                                                                                       |
+|----------|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| content  | @layeredapps/oauth-github/src/content/register-button.js         | Adds a GitHub button to the `<div id="oauth-buttons"></div>` on the registration page.            |
+| content  | @layeredapps/oauth-github/src/content/signin-button.js           | Adds a GitHub button to the `<div id="oauth-buttons"></div>` on the signin page.                  |
+| content  | @layeredapps/oauth-github/src/content/signin-error-templates.js  | Adds error messages for user declining, GitHub suspension or misconfiguration to the signin page. |
