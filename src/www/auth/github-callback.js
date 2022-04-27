@@ -58,6 +58,6 @@ module.exports = {
       return dashboard.Response.redirect(req, res, '/account/complete-profile')
     }
     // sign in to home
-    return dashboard.Response.redirect(req, res, '/home')
+    return dashboard.Response.redirect(req, res, global.homePath || '/home')
   }
 }
