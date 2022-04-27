@@ -1,4 +1,4 @@
-@layeredapps/dashboard 0.0.64
+@layeredapps/dashboard 0.0.65
 http://localhost:8000
 
 Administrator menu:
@@ -115,4 +115,4 @@ URL ------------------------------------------- AUTH - TEMPLATE - HTTP REQUESTS 
 /auth/github-redirect                           GUEST             GET             /src/www                   /src/www                  
 /home                                                                             static-page                @layeredapps/dashboard    
 
-2022-04-27T10:55:01.381Z
+2022-04-27T22:46:03.444Z
