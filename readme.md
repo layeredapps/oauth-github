@@ -69,3 +69,9 @@ This module comes with some convenience scripts you can add to your `package.jso
 | content  | @layeredapps/oauth-github/src/content/register-button.js         | Adds a GitHub button to the `<div id="oauth-buttons"></div>` on the registration page.            |
 | content  | @layeredapps/oauth-github/src/content/signin-button.js           | Adds a GitHub button to the `<div id="oauth-buttons"></div>` on the signin page.                  |
 | content  | @layeredapps/oauth-github/src/content/signin-error-templates.js  | Adds error messages for user declining, GitHub suspension or misconfiguration to the signin page. |
+
+## Icons
+
+Icons are obtained via [FlatIcon](https://flaticon.com) and copyright their respective owners:
+
+- [GitHub icon](https://www.flaticon.com/free-icon/github-sign_25657) by [Dave Gandy](https://www.flaticon.com/authors/dave-gandy)
