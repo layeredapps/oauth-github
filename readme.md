@@ -54,7 +54,6 @@ Edit your `package.json` to include the scripts for provider buttons and error m
 
     "dashboard": {
       "content": [
-        "@layeredapps/oauth-github/src/content/error-templates.js",
         "@layeredapps/oauth-github/src/content/register-button.js",
         "@layeredapps/oauth-github/src/content/signin-button.js"
       ]
@@ -68,7 +67,6 @@ This module comes with some convenience scripts you can add to your `package.jso
 |----------|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | content  | @layeredapps/oauth-github/src/content/register-button.js         | Adds a GitHub button to the `<div id="oauth-buttons"></div>` on the registration page.            |
 | content  | @layeredapps/oauth-github/src/content/signin-button.js           | Adds a GitHub button to the `<div id="oauth-buttons"></div>` on the signin page.                  |
-| content  | @layeredapps/oauth-github/src/content/signin-error-templates.js  | Adds error messages for user declining, GitHub suspension or misconfiguration to the signin page. |
 
 ## Icons
 

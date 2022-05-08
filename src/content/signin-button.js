@@ -1,3 +1,7 @@
+const errorTemplates = fs.readFileSync('./error-templates.html')
+const errorHTML = dashboard.HTML.parse(errorTemplates)
+const errorBody = errorHTML.getElementsByTagName('body')[0]
+
 module.exports = {
   page: signinButton
 }
@@ -18,4 +22,6 @@ async function signinButton (req, _, pageDoc) {
   }]
   const buttonContainer = pageDoc.getElementById('oauth-buttons')
   buttonContainer.appendChild(link)
+  const body = pageDoc.getElementsByTagName('body')[0]
+  body.child = body.child.concat(errorBody.child)
 }
